@@ -1,0 +1,33 @@
+[
+  {
+    "name": "complete_enquiry",
+    "text": "I am a 35-year-old woman with oily scalp, dandruff and heavy hair loss for 6 months. My budget is SGD 500.",
+    "expected": {
+      "gender": "female",
+      "age": 35,
+      "scalp_problems": ["oily_scalp", "dandruff"],
+      "hair_loss_symptoms": ["hair_loss"],
+      "duration": "6 months",
+      "budget": 500,
+      "severity": "severe"
+    }
+  },
+  {
+    "name": "mixed_negation",
+    "text": "I have no bald spots but I have noticeable shedding for three months.",
+    "expected": {
+      "hair_loss_symptoms": ["shedding"],
+      "duration": "3 months",
+      "severity": "moderate"
+    }
+  },
+  {
+    "name": "safe_empty",
+    "text": "",
+    "expected": {
+      "scalp_problems": [],
+      "hair_loss_symptoms": [],
+      "confidence_score": 0.0
+    }
+  }
+]

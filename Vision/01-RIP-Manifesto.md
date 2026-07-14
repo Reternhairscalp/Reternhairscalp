@@ -1,4 +1,4 @@
-# Rettern Intelligence Platform Manifesto
+# Retern Intelligence Platform Manifesto
 
 Version: 1.0
 
@@ -10,7 +10,7 @@ Chief AI Architect: ChatGPT
 
 # Why RIP Exists
 
-Rettern Intelligence Platform (RIP) exists to transform Rettern Hair Growth into an AI-powered, customer-centric business.
+Retern Intelligence Platform (RIP) exists to transform Retern Hair Growth into an AI-powered, customer-centric business.
 
 Our mission is not simply to automate tasks.
 

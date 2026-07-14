@@ -1,30 +1,45 @@
-def answer(self, question):
+"""Sales AI for the Retern Intelligence Platform."""
 
-    q = question.lower()
+from typing import Mapping
 
-    print("🧠 Sales AI Analysis\n")
+from core.config import Config
 
-    if "oily" in q:
 
-        print("Customer Concern : Oily Scalp")
-        print("Treatment        : Bojin Meridian Hair Growth")
-        print("Package          : 6 Sessions")
-        print("Home Care        : Oily Control Shampoo")
+class SalesAI:
+    """Provide the existing rule-based sales guidance interface."""
 
-    elif "hair loss" in q or "thinning" in q:
+    def __init__(self, memory: Mapping[str, str]) -> None:
+        self.memory = memory
+        self.company = Config.COMPANY_NAME
 
-        print("Customer Concern : Hair Loss")
-        print("Treatment        : Bojin Meridian Hair Growth")
-        print("Package          : 6 Sessions")
-        print("Timeline         : 4–6 Sessions")
+    def startup(self) -> None:
+        """Report that the Sales AI is available."""
+        print("\n" + "=" * 55)
+        print("💼 Sales AI")
+        print("=" * 55)
+        print(f"Company : {self.company}")
+        print("\n🎯 Sales AI Ready")
 
-    elif "dandruff" in q:
+    def answer(self, question: str) -> None:
+        """Print the existing keyword-based sales guidance."""
+        query = question.lower()
 
-        print("Customer Concern : Dandruff")
-        print("Treatment        : Scalp Detox Therapy")
-        print("Package          : 3 Sessions")
+        print("🧠 Sales AI Analysis\n")
 
-    else:
-
-        print("Knowledge found.")
-        print("Recommendation will be available in v0.6.")
+        if "oily" in query:
+            print("Customer Concern : Oily Scalp")
+            print("Treatment        : Bojin Meridian Hair Growth")
+            print("Package          : 6 Sessions")
+            print("Home Care        : Oily Control Shampoo")
+        elif "hair loss" in query or "thinning" in query:
+            print("Customer Concern : Hair Loss")
+            print("Treatment        : Bojin Meridian Hair Growth")
+            print("Package          : 6 Sessions")
+            print("Timeline         : 4–6 Sessions")
+        elif "dandruff" in query:
+            print("Customer Concern : Dandruff")
+            print("Treatment        : Scalp Detox Therapy")
+            print("Package          : 3 Sessions")
+        else:
+            print("Knowledge found.")
+            print("Recommendation will be available in v0.6.")
